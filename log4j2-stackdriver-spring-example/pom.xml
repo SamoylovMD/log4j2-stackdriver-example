@@ -94,9 +94,9 @@
             <version>${log4j.version}</version>
         </dependency>
         <dependency>
-            <groupId>me.msamoilov</groupId>
+            <groupId>me.msamoilov.example</groupId>
             <artifactId>log4j2-stackdriver</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <!--endregion-->
     </dependencies>
