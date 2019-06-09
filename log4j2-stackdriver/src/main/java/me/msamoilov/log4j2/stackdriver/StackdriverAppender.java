@@ -137,7 +137,7 @@ public class StackdriverAppender extends AbstractAppender {
     public void append(LogEvent event) {
         LogEntry.Builder builder = LogEntry
             .newBuilder(Payload.StringPayload.of(event.getMessage().getFormattedMessage()))
-            .setLogName(event.getLoggerName())
+            .setLogName(appName)
             .setTimestamp(event.getInstant().getEpochMillisecond())
             .setSeverity(log4jLevelToStackdriverSeverityMap.get(event.getLevel()));
         if (event.isIncludeLocation()) {
