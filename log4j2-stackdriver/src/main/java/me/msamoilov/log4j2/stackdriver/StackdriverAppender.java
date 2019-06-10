@@ -149,7 +149,6 @@ public class StackdriverAppender extends AbstractAppender {
         }
         LogEntry logEntry = builder.build();
         logging.write(Collections.singletonList(logEntry),
-            Logging.WriteOption.logName(event.getLoggerName()),
             Logging.WriteOption.labels(Map.of(
                 "app", appName,
                 "logger", event.getLoggerName(),
